@@ -1,0 +1,271 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  
+	<title>jquery.slidingTabs</title>
+	
+	
+<style type="text/css" media="screen">
+  /*GENERAL STYLES*/
+  * {
+    margin:0;
+    padding:0;
+  }
+  
+  body {
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:13px;
+    color:#333;
+  }
+  
+  a {
+    outline:none;
+    color:#333;
+  }
+  
+  /*COMMON STYLES FOR TABS*/
+  
+  .multi_tabs {
+    margin-bottom:25px;
+    width:600px;
+  }
+  
+  .multi_tabs .menu {
+    overflow:hidden;
+    position:relative;
+    z-index:10;
+    width:100%;
+  }
+  
+  .multi_tabs ul {
+    overflow:hidden;
+    position:relative;
+    width:9000px;
+  }
+  
+  .multi_tabs ul li{
+    float:left;
+    display:inline;
+    padding:6px 8px 4px 8px;
+    background:#F4F4F4;
+    border-right:1px solid #FFF;
+    height:19px;
+  }
+  
+  .multi_tabs ul li.active{
+    background:url('../images/multi_tabs_bg_active.png');
+  }
+  
+  .multi_tabs ul li a{
+    display:inline;
+    font-size:12px;
+    font-family:Tahoma, Verdana, Arial, sans-serif ;
+    color:#C4C4C4;
+    text-transform:uppercase;
+    text-decoration:none;
+  }
+  
+  .multi_tabs ul li.active a{
+    color:#000;
+  }
+  
+  .multi_tabs .cont_tabs{
+    clear:both;
+    background:#FFF;
+    padding-top:10px;
+  }
+  
+  .multi_tabs .next,
+  .multi_tabs .prev{
+    position:absolute;
+    display:block;
+    top:0;
+    width:24px;
+    height:29px;
+    background: #E4E4E4;
+    z-index:100;
+  }
+  
+  .multi_tabs .prev{
+    left:0;
+    border-right:1px solid #FFF;
+  }
+  
+  .multi_tabs .next{
+    right:0;
+    border-left:1px solid #FFF;
+  }
+  
+  .multi_tabs .accessible {
+    display:none;
+  }
+  
+  .multi_tabs .next span,
+  .multi_tabs .prev span{
+    display:block;
+    text-indent:-9999px;
+    width:100%;
+    height:29px;
+  }
+  
+  .multi_tabs .prev span {
+    background: url('images/arrow_left.png') no-repeat center center;
+  }
+  
+  .multi_tabs .next span {
+    background: url('images/arrow_right.png') no-repeat center center;
+  }
+  
+  
+  
+  /*EXAMPLE-3*/
+  .example-3 li {
+    width:300px;
+  }
+   
+</style>
+
+</head>
+
+<body>
+
+  <div class="multi_tabs">
+    <div class="menu">
+      <ul> 
+        <li class="active"><a href="ajaxcontent.html">TAB 1</a></li>
+        <li><a href="ajaxcontent.html">TAB 2</a></li>
+        <li><a href="ajaxcontent.html">TAB 3</a></li>
+        <li><a href="ajaxcontent.html">TAB 4</a></li>
+        <li><a href="ajaxcontent.html">TAB 5</a></li>
+        <li><a href="ajaxcontent.html">TAB 6</a></li>
+        <li><a href="ajaxcontent.html">TAB 7</a></li>
+        <li><a href="ajaxcontent.html">TAB 8</a></li>
+        <li><a href="ajaxcontent.html">TAB 9</a></li>
+        <li><a href="ajaxcontent.html">TAB 10</a></li>
+        <li><a href="ajaxcontent.html">TAB 11</a></li>
+        <li><a href="ajaxcontent.html">TAB 12</a></li>
+        <li><a href="ajaxcontent.html">TAB 13</a></li>
+        <li><a href="ajaxcontent.html">TAB 14</a></li>
+        <li><a href="ajaxcontent.html">TAB 15</a></li>
+        <li><a href="ajaxcontent.html">TAB 16</a></li>
+        <li><a href="ajaxcontent.html">TAB 17</a></li>
+        <li><a href="ajaxcontent.html">TAB 18</a></li>
+        <li><a href="ajaxcontent.html">TAB 19</a></li>
+        <li><a href="ajaxcontent.html">TAB 20</a></li>
+        <li><a href="ajaxcontent.html">TAB 21</a></li>
+        <li><a href="ajaxcontent.html">TAB 22</a></li>
+        <li><a href="ajaxcontent.html">TAB 23</a></li>
+        <li><a href="ajaxcontent.html">TAB 24</a></li>
+        <li><a href="ajaxcontent.html">TAB 25</a></li>
+        <li><a href="ajaxcontent.html">TAB 26</a></li>
+        <li><a href="ajaxcontent.html">TAB 27</a></li>
+        <li><a href="ajaxcontent.html">TAB 28</a></li>
+        <li><a href="ajaxcontent.html">TAB 29</a></li>
+        <li><a href="ajaxcontent.html">TAB 30</a></li>
+        <li><a href="ajaxcontent.html">TAB 31</a></li>
+        <li><a href="ajaxcontent.html">TAB 32</a></li>
+        <li><a href="ajaxcontent.html">TAB 33</a></li>
+      </ul>
+    </div><!-- .menu -->
+    <div class="cont_tabs">
+      <div>
+        First content
+      </div>
+    </div><!-- cont_tabs -->
+  </div><!-- multitabs -->
+  
+  
+  
+  
+  
+  <div class="multi_tabs">
+    <div class="menu">
+      <ul> 
+        <li class="active"><a href="ajaxcontent.html">TAB 1</a></li>
+        <li><a href="ajaxcontent.html">TAB 2</a></li>
+        <li><a href="ajaxcontent.html">TAB 3</a></li>
+        <li><a href="ajaxcontent.html">TAB 4</a></li>
+        <li><a href="ajaxcontent.html">TAB 5</a></li>
+        <li><a href="ajaxcontent.html">TAB 6</a></li>
+        <li><a href="ajaxcontent.html">TAB 7</a></li>
+        <li><a href="ajaxcontent.html">TAB 8</a></li>
+        <li><a href="ajaxcontent.html">TAB 9</a></li>
+        <li><a href="ajaxcontent.html">TAB 10</a></li>
+        <li><a href="ajaxcontent.html">TAB 11</a></li>
+        <li><a href="ajaxcontent.html">TAB 12</a></li>
+        <li><a href="ajaxcontent.html">TAB 13</a></li>
+      </ul>
+    </div><!-- .menu -->
+    <div class="cont_tabs">
+      <div>
+        First content
+      </div>
+    </div><!-- cont_tabs -->
+  </div><!-- multitabs -->
+  
+  
+  <div class="multi_tabs">
+    <div class="menu">
+      <ul> 
+        <li class="active"><a href="ajaxcontent.html">TAB 1</a></li>
+        <li><a href="ajaxcontent.html">TAB 2</a></li>
+        <li><a href="ajaxcontent.html">TAB 3</a></li>
+        <li><a href="ajaxcontent.html">TAB 4</a></li>
+        <li><a href="ajaxcontent.html">TAB 5</a></li>
+        <li><a href="ajaxcontent.html">TAB 6</a></li>
+        <li><a href="ajaxcontent.html">TAB 7</a></li>
+      </ul>
+    </div><!-- .menu -->
+    <div class="cont_tabs">
+      <div>
+        First content
+      </div>
+    </div><!-- cont_tabs -->
+  </div><!-- multitabs -->
+  
+  
+  <div class="multi_tabs example-3">
+    <div class="menu">
+      <ul> 
+        <li class="active"><a href="ajaxcontent.html">TAB 1</a></li>
+        <li><a href="ajaxcontent.html">TAB 2</a></li>
+        <li><a href="ajaxcontent.html">TAB 3</a></li>
+        <li><a href="ajaxcontent.html">TAB 4</a></li>
+        <li><a href="ajaxcontent.html">TAB 5</a></li>
+        <li><a href="ajaxcontent.html">TAB 6</a></li>
+        <li><a href="ajaxcontent.html">TAB 7</a></li>
+        <li><a href="ajaxcontent.html">TAB 8</a></li>
+        <li><a href="ajaxcontent.html">TAB 9</a></li>
+        <li><a href="ajaxcontent.html">TAB 10</a></li>
+        <li><a href="ajaxcontent.html">TAB 11</a></li>
+        <li><a href="ajaxcontent.html">TAB 12</a></li>
+        <li><a href="ajaxcontent.html">TAB 13</a></li>
+        <li><a href="ajaxcontent.html">TAB 14</a></li>
+        <li><a href="ajaxcontent.html">TAB 15</a></li>
+        <li><a href="ajaxcontent.html">TAB 16</a></li>
+        <li><a href="ajaxcontent.html">TAB 17</a></li>
+      </ul>
+    </div><!-- .menu -->
+    <div class="cont_tabs">
+      <div>
+        First content
+      </div>
+    </div><!-- cont_tabs -->
+  </div><!-- multitabs -->
+  
+  
+  <script src="javascripts/jquery.1.4.2.js" type="text/javascript" charset="utf-8"></script>
+  <script src="javascripts/jquery.slidingTabs.js" type="text/javascript" charset="utf-8"></script>
+  
+  <script type="text/javascript" charset="utf-8">
+    $(function(){
+      $('.multi_tabs:not(.example-3)').slidingTabs({ tabs: '.menu', content : '.cont_tabs', diff_widths : true, offset_x : 10 });
+      
+      $('.example-3').slidingTabs({ tabs: '.menu', content : '.cont_tabs', diff_widths : true });
+    })
+  </script>
+</body>
+</html>
