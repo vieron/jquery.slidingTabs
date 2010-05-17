@@ -3,8 +3,8 @@
 //  A jQuery plugin for create animated tabs style carousel that loads dinamic content via ajax
 //  
 //  Created by Javier Sánchez - Marín (vieron) 
-//  http://blog.vieron.net
-//  http://github.com/vieron/flexipage
+//  http://www.angryloop.net/blog/2010/05/16/jquery-slidingtabs-animated-tabs-that-loads-dinamic-content-via-ajax/
+//  http://github.com/vieron/jquery.slidingTabs/
 //  Free distribution.
 // 
 
@@ -27,7 +27,6 @@ $.fn.slidingTabs = function(options) {
           $viewport_w = $tabs_wiewport[0].clientWidth,
           $tabs_total_w = 0,
           $last_offset = 0;
-          
           
           
           //si las pestañas tienen anchos diferentes, las recorremos y guardamos los anchos en un array
